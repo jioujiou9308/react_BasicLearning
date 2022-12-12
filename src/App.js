@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// 組件狀態 類組建作為演示
+class TestComponent extends React.Component {
+	// 1.定義組件狀態
+	state = {
+		// 在這裡可以定義各種屬性 全都是當前組件的狀態
+		name: 'cp teacher',
+	};
+	render() {
+		return <div>this is TestComponent 當前name 為{this.state.name}</div>;
+	}
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<TestComponent />
+		</div>
+	);
 }
 
 export default App;
